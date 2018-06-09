@@ -79,6 +79,15 @@ describe('calculator', function () {
     assert.strictEqual(actualTwo, 28);
   });
 
+  it('should be able to use the operator symbols to complete functions', function() {
+      calculator.numberClick(5.56);
+      calculator.operatorClick('+');
+      calculator.numberClick(6.29);
+      calculator.operatorClick('=');
+      const actual = calculator.runningTotal;
+      assert.strictEqual(actual, 11.85);
+  });
+
 });
 
 
