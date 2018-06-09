@@ -55,4 +55,11 @@ describe('calculator', function () {
     assert.strictEqual(actual, 133.226);
   });
 
+  it('should be able to mulitply numbers', function(){
+    calculator.previousTotal = 23.445;
+    calculator.multiply(1.4);
+    const actual = calculator.runningTotal;
+    assert.strictEqual(actual, 32.823);
+  });
+
 });
