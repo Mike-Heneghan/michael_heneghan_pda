@@ -62,4 +62,11 @@ describe('calculator', function () {
     assert.strictEqual(actual, 32.823);
   });
 
+  it('should be able to divide numbers', function() {
+    calculator.previousTotal = 23.67;
+    calculator.divide(1.2);
+    const actual = calculator.runningTotal;
+    assert.strictEqual(actual, 19.725);
+  });
+
 });
