@@ -48,4 +48,11 @@ describe('calculator', function () {
     assert.strictEqual(actual, 33.238);
   });
 
+  it('should be able to subtract one number from another', function() {
+    calculator.previousTotal = 156.896;
+    calculator.subtract(23.67);
+    const actual = calculator.runningTotal;
+    assert.strictEqual(actual, 133.226);
+  });
+
 });
