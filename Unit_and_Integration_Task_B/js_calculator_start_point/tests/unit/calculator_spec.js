@@ -69,4 +69,19 @@ describe('calculator', function () {
     assert.strictEqual(actual, 19.725);
   });
 
+  it('should be able to take two numbers and concatenate them', function() {
+    calculator.numberClick(2);
+    const actualOne = calculator.runningTotal;
+    assert.strictEqual(actualOne, 2);
+
+    calculator.numberClick(8);
+    const actualTwo = calculator.runningTotal;
+    assert.strictEqual(actualTwo, 28);
+  });
+
 });
+
+
+// calculator.numberClick()
+// calculator.operatorClick()
+// calculator.clearClick()
