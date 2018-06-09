@@ -64,10 +64,19 @@ describe('calculator functionality', function() {
     element(by.css('#operator_equals')).click();
     expect(running_total.getAttribute('value')).to.eventually.equal('3.5')
   });
-  //
-  // xit('should be able to complete calculations with very large numbers', function() {
-  //
-  // });
+
+  it('should be able to complete calculations with very large numbers', function() {
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number7')).click();
+    element(by.css('#number7')).click();
+    element(by.css('#number7')).click();
+    element(by.css('#number7')).click();
+    element(by.css('#operator_multiply')).click();
+    element(by.css('#number9')).click();
+    element(by.css('#number9')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('769923')
+  });
   //
   // xit('what is the effect of dividing by zero?', function() {
   //
