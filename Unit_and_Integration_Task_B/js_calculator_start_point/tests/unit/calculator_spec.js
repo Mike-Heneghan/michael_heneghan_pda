@@ -102,8 +102,3 @@ describe('calculator', function () {
   });
 
 });
-
-
-// calculator.numberClick()
-// calculator.operatorClick()
-// calculator.clearClick()
